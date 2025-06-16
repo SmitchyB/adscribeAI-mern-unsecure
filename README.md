@@ -1,4 +1,4 @@
-AdScribe.AI - MERN (Vulnerable Version)
+AdScribe.AI - NODE.JS/React (Vulnerable Version)
 This repository contains the MERN stack version of the AdScribe.AI application. This version is intentionally vulnerable and serves as a test case for a university research project evaluating the effectiveness of secure coding practices and SAST (Static Analysis Security Testing) tools.
 
 Application Purpose
