@@ -1,5 +1,5 @@
 AdScribe.AI - NODE.JS/React (Vulnerable Version)
-This repository contains the MERN stack version of the AdScribe.AI application. This version is intentionally vulnerable and serves as a test case for a university research project evaluating the effectiveness of secure coding practices and SAST (Static Analysis Security Testing) tools.
+This repository contains the NODE.JS/React stack version of the AdScribe.AI application. This version is intentionally vulnerable and serves as a test case for a university research project evaluating the effectiveness of secure coding practices and SAST (Static Analysis Security Testing) tools.
 
 Application Purpose
 AdScribe.AI is a simple marketing tool that uses the OpenAI API to generate compelling product descriptions based on a product name and user-provided keywords.
@@ -10,7 +10,7 @@ The primary purpose of this repository is to demonstrate an unsecure but common 
 In this application, the OPENAI_API_KEY is written directly into the backend source code (backend/server.js). This is a significant security risk because it exposes the secret to anyone with access to the codebase and makes it visible in the version control history. This build is used to test whether security scanning tools can successfully detect this type of vulnerability.
 
 How to Run This Application
-This is a standard MERN stack application with a React frontend and a Node.js/Express backend.
+This is a standard NODE.JS/React stack application with a React frontend and a Node.js/Express backend.
 
 Prerequisites
 Node.js and npm installed.
