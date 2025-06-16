@@ -1,15 +1,18 @@
 // src/InputForm.js
-import { useState } from "react";
+import { useState } from "react"; // Import React's useState hook for managing component state
 import "./InputForm.css"; // Import styles for the InputForm component
+
+// InputForm component to handle user input for product name and keywords
 function InputForm({ onGenerate, isLoading }) {
-  const [productName, setProductName] = useState('');
-  const [keywords, setKeywords] = useState('');
+
+  const [productName, setProductName] = useState(''); // State to hold the product name input
+  const [keywords, setKeywords] = useState(''); // State to hold the keywords input
 
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent page reload on form submit
-    onGenerate(productName, keywords);
+    onGenerate(productName, keywords); // Call the onGenerate function passed as a prop with the current inputs
   };
-
+  // Render the input form for product name and keywords
   return (
     <div className="card">
       <form onSubmit={handleSubmit}>

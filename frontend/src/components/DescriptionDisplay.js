@@ -4,11 +4,13 @@ import './DescriptionDisplay.css';
 // Added 'error' as a prop
 function DescriptionDisplay({ description, isLoading, error }) {
 
+  // Function to handle copying the description to clipboard
   const handleCopy = () => {
-    navigator.clipboard.writeText(description);
-    alert('Description copied to clipboard!');
+    navigator.clipboard.writeText(description); // Use the Clipboard API to copy text
+    alert('Description copied to clipboard!'); // Notify the user that the text has been copied
   };
 
+  // Render the component
   return (
     <div className="card result-card">
       {isLoading && (

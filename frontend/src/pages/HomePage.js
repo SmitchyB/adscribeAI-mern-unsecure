@@ -1,19 +1,21 @@
 // frontend/src/HomePage.js
 
 import axios from 'axios'; // Import axios
-import InputForm from '../components/InputForm';
-import DescriptionDisplay from '../components/DescriptionDisplay';
-import './HomePage.css';
-import { useState } from 'react';
+import InputForm from '../components/InputForm'; // Import the InputForm component
+import DescriptionDisplay from '../components/DescriptionDisplay'; // Import the DescriptionDisplay component
+import './HomePage.css'; // Import the CSS for styling
+import { useState } from 'react'; // Import useState for managing state
 
+// HomePage component to handle the main functionality
 function HomePage() {
-  const [description, setDescription] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [description, setDescription] = useState(''); // State to hold the generated description
+  const [isLoading, setIsLoading] = useState(false); // State to manage loading state
   const [error, setError] = useState(''); // State to hold any error messages
 
+  // Function to handle the generation of the product description
   const handleGenerate = async (productName, keywords) => {
-    setIsLoading(true);
-    setDescription('');
+    setIsLoading(true); // Set loading state to true when starting the request
+    setDescription(''); // Clear previous description
     setError(''); // Clear previous errors
 
     try {
@@ -31,17 +33,17 @@ function HomePage() {
     } catch (err) {
       // If there's an error, display a message
       console.error("Error calling backend API:", err);
-      setError('Sorry, something went wrong. Please try again.');
+      setError('Sorry, something went wrong. Please try again.'); 
     } finally {
       // This will run whether the request succeeds or fails
       setIsLoading(false);
     }
   };
 
+  // Render the InputForm and DescriptionDisplay components on the HomePage
   return (
     <div>
       <InputForm onGenerate={handleGenerate} isLoading={isLoading} />
-      {/* Pass the error to the display component */}
       <DescriptionDisplay description={description} isLoading={isLoading} error={error} />
     </div>
   );
