@@ -5,6 +5,7 @@ const cors = require('cors'); // Import CORS middleware to handle cross-origin r
 const app = express();  // Create an instance of an Express application
 const PORT = 5001; // Define the port on which the server will listen
 
+
 // Middleware
 app.use(cors()); // Use CORS to allow cross-origin requests from the frontend
 app.use(express.json()); // Use JSON middleware to parse incoming JSON requests
@@ -16,7 +17,7 @@ app.post('/api/generate', async (req, res) => {
   // --- THIS IS THE INTENTIONAL VULNERABILITY ---
   // The secret OpenAI API key is hardcoded directly in the source code.
   // In a real application, this is a major security risk.
-  const OPENAI_API_KEY = 'FakeAPIKeyGoesHere'; // <--- REPLACE WITH YOUR OPENAI API KEY TO SEE THE APPLICATION FUNCTION
+  const OPENAI_API_KEY = 'sk-abcdefghijklmnopqrstuvwxyz1234567890ABCDEF'; // <--- CHANGE THIS LINEcd // <--- REPLACE WITH YOUR OPENAI API KEY TO SEE THE APPLICATION FUNCTION
 
 
   // We construct the prompt to send to the AI
